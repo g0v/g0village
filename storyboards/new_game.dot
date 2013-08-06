@@ -34,11 +34,11 @@ digraph {
   theme_1_options_1 -> theme_1_options_1_choice_1
   theme_1_options_1 -> theme_1_options_1_choice_2
   theme_1_options_1 -> theme_1_options_1_choice_3
-  theme_1_options_1 -> theme_2
+  theme_1_options_1 -> theme_2_start
 
-  theme_1_options_1_choice_1 [shape=box, label="顯示零時條款\n關閉後回到選擇枝"]
+  theme_1_options_1_choice_1 [shape=box, label="1. 顯示零時條款\n關閉後回到選擇枝"]
   theme_1_options_1_choice_1 -> theme_1_options_1
-  theme_1_options_1_choice_2 [shape=component, label="恭喜你成為村長了！\n(theme_1_options_1_choice_2)"]
-  theme_1_options_1_choice_3 [shape=component, label="魔王出現，進入戰鬥模式\n(theme_1_options_1_choice_3)"]
-  theme_2 [shape=component, label="進入第二幕\n(theme_2)"]
+  theme_1_options_1_choice_2 [shape=component, label="2. 恭喜你成為村長了！\n(theme_1_options_1_choice_2)"]
+  theme_1_options_1_choice_3 [shape=component, label="3. 魔王出現，進入戰鬥模式\n(theme_1_options_1_choice_3)"]
+  theme_2_start [shape=component, label="4. 進入第二幕\n(theme_2_start)"]
 }

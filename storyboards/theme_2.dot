@@ -1,0 +1,18 @@
+digraph {
+
+  theme_2_start [label="華麗的過場動畫！"]
+
+  theme_2_start [shape=box, label="第二幕\n高村長帶著勇者進到村莊，看到許多忙進忙出的村民"]
+  theme_2_start -> theme_2_1
+
+  theme_2_1 [shape=box, label="高村長：「這個村莊剛剛建好，百廢待舉，你先到處看看吧」"]
+  theme_2_1 -> theme_2_options_1
+
+  theme_2_options_1 [shape=diamond, label="1. 跟村長聊天\n2. 到處走走認識村民(hub)\n3. 進入酒吧聊天(irc)\n4. 觀看議事佈告(googlegroup) \n5. 我想賺經驗值！(project_list)\n6. 出村打怪\n"]
+  theme_2_options_1 -> theme_2_options_1_chat_villagehead
+  theme_2_options_1 -> theme_2_options_1_hub
+  theme_2_options_1 -> theme_2_options_1_irc
+  theme_2_options_1 -> theme_2_options_1_google_group
+  theme_2_options_1 -> theme_2_options_1_project_list
+  theme_2_options_1 -> theme_2_options_1_hack
+}
