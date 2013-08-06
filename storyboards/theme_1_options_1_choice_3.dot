@@ -1,6 +1,6 @@
 digraph {
 
-  theme_1_options_1_choice_3 [shape=box, label="魔王出現，進入戰鬥模式\n(theme_1_options_1_choice_2)"]
+  theme_1_options_1_choice_3 [shape=box, label="魔王出現，進入戰鬥模式\n(theme_1_options_1_choice_3)"]
 
   theme_1_options_1_choice_3 -> boss_handshake
   boss_handshake [shape="box", label="魔王見到熱血青年勇者，施展「握手」技能"]
