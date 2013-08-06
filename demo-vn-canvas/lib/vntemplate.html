@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Game Title</title>
+    <meta name="description" content="Description of the game." />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div style="text-align: center;">
+      <canvas id="stage" width="720" height="480" style="border:1px solid black" oncontextmenu="return false;" onselectstart="return false;">
+        Your browser does not appear to support HTML5.  Try upgrading your browser to the latest version.<br/>
+        <a href="http://www.microsoft.com/windows/internet-explorer/default.aspx">Microsoft Internet Explorer</a><br/>
+        <a href="http://www.mozilla.com/firefox/">Mozilla Firefox</a><br/>
+        <a href="http://www.google.com/chrome/">Google Chrome</a><br/>
+        <a href="http://www.apple.com/safari/download/">Apple Safari</a><br/>
+        <a href="http://www.google.com/chromeframe">Google Chrome Frame for Internet Explorer</a><br/>
+      </canvas>
+    </div>
+	
+	<script src="vntoc.js"></script>
+	<script src="canvastext-0.4.1.mod.js"></script>
+    <script src="vncanvas-0.3.js"></script>
+	    <script>
+      window.onload = function() {
+        Stage.Init("stage", 720, 480);
+        Stage.script.Init(chapter1);
+      }
+    </script>
+  </body>
+</html>

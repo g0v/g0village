@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="IE=edge,chrome=IE8" http-equiv="X-UA-Compatible" />
+    <title>g0village VN-Canvas Demo</title>
+    <link rel="stylesheet" href="demo/demo-style.css" />
+  </head>
+  <body style="font-family: Verdana, Geneva, Arial, helvetica, sans-serif;">
+	<div id="logo"><img title="HTML 5" alt="HTML 5" src="img/logo.png" />
+	  <p id="debug">This demo is not recommended for small mobiles due to its dimensions.<br>
+					Tested in Chrome, Firefox, Opera, Safari on WinXP</p>
+	  <!-- Creative Commons License -->
+	  <p><br /><a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/3.0/ph/"><img alt="Creative Commons License" style="border-width:0" src="img/cc-by-nc-sa.png" /></a><br /><span xmlns:dc="http://purl.org/dc/elements/1.1/" href="http://purl.org/dc/dcmitype/InteractiveResource" property="dc:title" rel="dc:type">
+	  This VN template</span> by <a xmlns:cc="http://creativecommons.org/ns#" href="http://hobbyprojects.wordpress.com" property="cc:attributionName" rel="cc:attributionURL">[lo'ner]</a> is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/3.0/ph/">
+	  Creative Commons Attribution-Noncommercial-Share Alike 3.0 License</a>.</p>	
+	  <p><br /><a href="http://creativecommons.org/licenses/LGPL/2.1/"><img alt="CC-GNU LGPL" border="0" src="img/cc-LGPL-a.png" /></a><br />
+	  Wherever applicable (e.g. JavaScript engine), this software is licensed under the <a href="http://creativecommons.org/licenses/LGPL/2.1/">CC-GNU LGPL</a> version 2.1 or later.</p>
+	  <!-- /Creative Commons License -->	  
+	</div>
+	<div style="text-align:center;"> 
+	  <canvas id="stage" onselectstart="return false;" oncontextmenu="return false;">
+        Your browser does not appear to support HTML5. Try upgrading your browser to the latest version. <br /><br />
+        <a href="http://www.microsoft.com/windows/internet-explorer/default.aspx">Microsoft Internet Explorer</a><br />
+        <a href="http://www.mozilla.com/firefox/">Mozilla Firefox</a><br />
+        <a href="http://www.google.com/chrome/">Google Chrome</a><br />
+        <a href="http://www.apple.com/safari/download/">Apple Safari</a><br />
+        <a href="http://www.google.com/chromeframe">Google Chrome Frame for Internet Explorer</a><br />
+	  </canvas> 
+	</div>
+
+	<!-- load scripts here -->
+	<script src="../include/jquery-1.7.1.min.js"></script>
+	<script src="demo/demo-toc.js"></script>
+	<script src="lib/canvastext-0.4.1.mod.js"></script>
+	<script src="lib/vncanvas-0.4.js"></script>
+
+	<script>
+	window.onload = function() {
+		Stage.Init("stage", 720, 480);
+		Stage.script.Init(demo_chapter);
+	}
+	</script>
+  </body>
+</html>
