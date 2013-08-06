@@ -45,7 +45,7 @@ demo_chapter = [
 	text, {align:"left", value:"很久很久以前，在一座遙遠的島上，有個小村莊。"},
 	box, {pos:"bottom", back:"dim", show:false},
 	/* audio, {bgm:"demo/town03"}, */
-	/* scene, {src:"demo/bgtown01.jpg", effect:"dissolve nowait"}, */
+	scene, {src:"demo/background.png", effect:"dissolve nowait"},
 	actor, {id:"Elder", sprite:["v-town", "demo/elder.png"], /*avatar:["base","demo/vina_avatar.png"], */effect:"dissolve"},
 	"Elder", "勇者你來了啊......。",
 	"Elder", {show:false, effect:"dissolve nowait"},
