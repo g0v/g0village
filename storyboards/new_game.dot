@@ -1,0 +1,44 @@
+digraph {
+
+  new_game [label="新遊戲"]
+  new_game -> theme_1_start
+
+  theme_1_start [shape=box, label="第一幕\n出現問號頭像/姓名的勇者與高村長"]
+  theme_1_start -> theme_1_1
+
+  theme_1_1 [shape=box, label="高村長：「勇者你來了啊......」"]
+  theme_1_1 -> load_intro
+
+  load_intro [shape=diamond, label="你要從哪裡載入自我介紹？\n1. Facebook\n2. GitHub\n3. Twitter"]
+  load_intro -> load_intro_from_facebook [label="Facebook"]
+  load_intro -> load_intro_from_github [label="GitHub"]
+  load_intro -> load_intro_from_twitter [label="Twitter"]
+
+  load_intro_from_facebook [shape=component, label="Facebook 授權\n取得Email, 姓名"]
+  load_intro_from_github [shape=component, label="GitHub 授權\n取得Email, 姓名"]
+  load_intro_from_twitter [shape=component, label="Twitter 授權\n取得Email, nickname"]
+  load_intro_from_facebook -> fill_intro
+  load_intro_from_github -> fill_intro
+  load_intro_from_twitter -> fill_intro
+
+  fill_intro [shape=component, label="填寫剩餘資料\n(需要資料尚未訂定)"]
+  fill_intro -> theme_1_2
+
+  theme_1_2 [shape=box, label="勇者頭上出現用戶頭像/姓名。高村長：「某某某你來了啊」"]
+  theme_1_2 -> theme_1_3
+
+  theme_1_3 [shape=box, label="高村長：「這個政府是零時政府\n首都也是零時首都\n連個憲法都是部零時條款」"]
+  theme_1_3 -> theme_1_options_1
+
+  theme_1_options_1 [shape=diamond, label="1. 閱讀零時條款\n2. 打倒村長\n3. 別囉唆我要打魔王\n4. 我可以幫上什麼忙？"]
+  theme_1_options_1 -> theme_1_options_1_choice_1
+  theme_1_options_1 -> theme_1_options_1_choice_2
+  theme_1_options_1 -> theme_1_options_1_choice_3
+  theme_1_options_1 -> theme_1_options_1_choice_4
+
+  theme_1_options_1_choice_1 [shape=box, label="顯示零時條款\n關閉後回到選擇枝"]
+  theme_1_options_1_choice_1 -> theme_1_options_1
+  theme_1_options_1_choice_2 [shape=component, label="恭喜你成為村長了！\n(theme_1_options_1_choice_2)"]
+  theme_1_options_1_choice_3 [shape=component, label="魔王出現，進入戰鬥模式\n(theme_1_options_1_choice_2)"]
+  theme_1_options_1_choice_4 [shape=component, label="進入第二幕\n(theme_1_options_1_choice_4)"]
+}

@@ -1,0 +1,13 @@
+digraph {
+
+  start [label="開始遊戲"]
+
+  start -> start_menu
+  start_menu [shape=diamond, label="1. 開始遊戲\n2. 載入上次進度"]
+
+  start_menu -> load_game
+  start_menu -> new_game
+
+  new_game [label="新遊戲 (new_game)"]
+  load_game [shape=component, label="跳到上次遊戲中斷點"]
+}
