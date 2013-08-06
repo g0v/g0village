@@ -10,3 +10,4 @@ g0village
 * 如果做成 AVG 形式
   * http://www.renpy.org/ 
   * https://github.com/jdeisenberg/js-vine
+  * https://code.google.com/p/vn-canvas/

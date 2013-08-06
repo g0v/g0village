@@ -1,0 +1,147 @@
+/* Add whatever you need to your CSS reset */
+html, div, body, h1, form, fieldset, input, textarea{
+	margin: 0;
+	padding: 0;
+	border: none;
+}
+
+/* HTML5 logo style */
+#logo {
+	position: absolute;
+	top: 1em;
+	left: 1em;
+	font-size: 10px;
+	width: 140px;
+}
+
+/* Main canvas stage style */
+#stage {
+	width: 720px;
+	height: 480px;
+	border: 1px solid rgb(153, 153, 153);
+	-webkit-border-radius: 16px 16px 16px 16px;
+	border-radius: 16px 16px 16px 16px;
+	-webkit-box-shadow: 5px 5px 3px 3px rgb(204, 204, 204);
+	box-shadow: 5px 5px 3px 3px rgb(204, 204, 204);
+	background-color: rgb(51, 51, 51);
+}
+@font-face {
+	font-family: 'M1m';
+	src: url('../css/fonts/mplus-1m-regular-webfont.eot');
+	src: local('M1m'), url('../css/fonts/mplus-1m-regular-webfont.woff') format('woff'), url('../css/fonts/mplus-1m-regular-webfont.ttf') format('truetype'), url('../css/fonts/mplus-1m-regular-webfont.svg#webfontVd14f4NN') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+/* Global form style */
+form { 
+	float: left;
+	border: 1px solid #ddd; 
+	padding: 30px 40px 20px 40px;
+	margin: 50px 0 0 140px;
+	width: 360px;
+	height: 250px;
+	background: #fff;
+
+	/* -- CSS3 - define rounded corners for the form -- */	
+	-webkit-border-radius: 10px;
+	-moz-border-radius: 10px;
+	border-radius: 10px; 		
+
+	/* -- CSS3 - create a background graident -- */
+	background: -webkit-gradient(linear, 0% 0%, 0% 40%, from(#EEE), to(#FFFFFF)); 
+	background: -moz-linear-gradient(0% 40% 90deg,#FFF, #EEE); 
+
+	/* -- CSS3 - add a drop shadow -- */
+	-webkit-box-shadow:0px 0 50px #ccc;
+	-moz-box-shadow:0px 0 50px #ccc; 
+	box-shadow:0px 0 50px #ccc;		 		
+}
+fieldset { 
+	/*border: 1px solid #ddd;*/
+	text-align: left;
+}
+h1 { 
+	font-size: 20px;
+	color: #555; 
+	margin: 0 0 10px 0; 
+	text-align: left;
+}
+label {	
+	font-size: 16px;
+	color: #666; 
+	margin: 0 10px 0 10px;
+}
+input, textarea, select { 		
+	padding: 2px; 
+	margin: 2px 5px 10px 0; 
+	background: #fff; 
+	width: 150px; 
+	font-size: 12px; 
+	color: #555; 
+	border: 1px #ddd solid;
+	
+	/* -- CSS3 - define rounded corners for each element -- */	
+	-webkit-border-radius: 4px;
+	-moz-border-radius: 4px;
+	border-radius: 4px; 	
+	
+	/* -- CSS3 Shadow - create a shadow around each input element -- */ 
+	-webkit-box-shadow: 0px 0px 4px #aaa;
+	-moz-box-shadow: 0px 0px 4px #aaa; 
+	box-shadow: 0px 0px 4px #aaa;
+	
+	/* -- CSS3 Transition - define what the transition will be applied to (i.e. the background) -- */		
+	-webkit-transition: background 0.3s linear;							
+}
+textarea {		
+	width: 220px; 
+	height: 175px; 		 		
+}
+input:hover, textarea:hover, select:hover { 
+	background: #eee; 
+}
+input[type="button"] { 	
+	width: 150px; 
+	color: #eee; 
+	text-transform: uppercase; 
+	margin-top: 10px;
+	background-color: #ff8000;
+	border: none;
+	font-size: 14px;
+	
+	/* -- CSS3 Transition - define which property to animate (i.e. the shadow)  -- */
+	-webkit-transition: -webkit-box-shadow 0.3s linear;
+					
+	/* -- CSS3 Shadow - create a shadow around each input element -- */ 
+	background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#ff8000), to(#e6a418)); 
+	background: -moz-linear-gradient(25% 75% 90deg,#e6a418,#ff8000);		
+} 
+input[type="button"]:hover { 		
+	-webkit-box-shadow: 0px 0px 20px #555;
+	-moz-box-shadow: 0px 0px 20px #aaa; 
+	box-shadow: 0px 0px 20px #555;	
+	cursor:  pointer; 
+
+} 
+input[type="checkbox"], input[type="radio"] {
+	width: 30px; 
+	border: none;
+}
+input[type="number"], input[type="range"] {
+	width: 120px; 
+	border: none;
+}
+#left_controls { 
+	float: left;
+	width: 175px; 
+}
+#right_controls { 
+	float: right;
+	width: 175px; 
+}
+#bottom_controls {
+	float: none;
+	text-align: right;
+	width: 350px;
+}
