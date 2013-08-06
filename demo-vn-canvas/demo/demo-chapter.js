@@ -42,13 +42,42 @@ demo_chapter = [
 		marquee, {name:"timer", x:630, y:10, w:80, h:20},
 	],
 	box, {pos:"full", back:"image"},
-	text, {align:"left", value:"很久很久以前，在一座遙遠的島上，有個小村莊..."},
+	text, {align:"left", value:"很久很久以前，在一座遙遠的島上，有個小村莊。"},
 	box, {pos:"bottom", back:"dim", show:false},
+	/* audio, {bgm:"demo/town03"}, */
+	/* scene, {src:"demo/bgtown01.jpg", effect:"dissolve nowait"}, */
+	actor, {id:"Elder", sprite:["v-town", "demo/elder.png"], /*avatar:["base","demo/vina_avatar.png"], */effect:"dissolve"},
+	"Elder", "勇者你來了啊......。",
+	"Elder", {show:false, effect:"dissolve nowait"},
+
+	actor, {id:"Hero", sprite:["v-town", "demo/hero.png"], effect:"dissolve"},
+  "Hero", "......。",
+
+  menu, ["你要從哪裡載入自我介紹？",
+         "1. Facebook", "label_info_facebook",
+         "2. GitHub",   "label_info_github",
+         "3. Twitter",  "label_info_twitter"],
+
+  label, "label_info_facebook",
+  box, {},
+  text, {align:"center", value:"從 Facebook 讀取了您的資料。"},
+  box, {show:false},
+  jump, "label_info_loaded",
+
+  label, "label_info_github",
+  box, {},
+  text, {align:"center", value:"從 GitHub 讀取了您的資料。"},
+  box, {show:false},
+  jump, "label_info_loaded",
+
+  label, "label_info_twitter",
+  box, {},
+  text, {align:"center", value:"從 Twitter 讀取了您的資料。"},
+  box, {show:false},
+
+  label, "label_info_loaded",
+  "Hero", {show:false, effect:"dissolve nowait"},
   /*
-	audio, {bgm:"demo/town03"},
-	scene, {src:"demo/bgtown01.jpg", effect:"dissolve nowait"},
-	actor, {id:"Vina", sprite:["v-town", "demo/vina01.png"], avatar:["base","demo/vina_avatar.png"], effect:"dissolve"},
-	text, "She looks pleasant but neither pretty nor ugly.",
 	set, {Vina_level:"+2"},
 	text, "She's got freckles and as clumsy as a toddler.",
 	text, "She loves singing but her voice isn't that great.",
@@ -196,7 +225,7 @@ some pretty amazing adventures together, which I might tell you someday.",
   */
 
 	label, "end",
-	video, {src:"demo/theend"},
+	/*video, {src:"demo/theend"},*/
 	cform, "close",
 	set, {c:"+1", a:4},
 	jump, "demo_chapter"
