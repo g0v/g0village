@@ -1,0 +1,21 @@
+digraph {
+
+  theme_1_options_1_choice_3 [shape=box, label="恭喜你成為村長了！\n(theme_1_options_1_choice_2)"]
+
+  theme_1_options_1_choice_3 -> read_manual
+  read_manual [shape="box", label="閱讀村長手冊"]
+  read_manual -> read_manual_next
+  read_manual_next [shape="box", label="閱讀更多的村長手冊"]
+  read_manual_next -> read_manual_complete
+  read_manual_complete [shape="box", label="獲得技能！「推坑」、「召喚」、「建設村莊」、「準備食材」、「集會遊行」"]
+  read_manual_complete -> villagehead_options_1
+  villagehead_options_1 [shape="diamond", label="1. 召喚新勇者\n2. 推坑新勇者\n3. 準備勇者的食物\n4. 準備勇者的木材\n5. 媽啊我不幹了！"]
+  villagehead_options_1 -> villagehead_options_1_choice_1
+  villagehead_options_1 -> villagehead_options_1_choice_2
+  villagehead_options_1 -> villagehead_options_1_choice_3
+  villagehead_options_1 -> villagehead_options_1_choice_4
+  villagehead_options_1 -> villagehead_options_1_choice_last
+
+  villagehead_options_1_choice_1 [shape="component", label="連結Twitter或Facebook，分享g0village真好玩的訊息"]
+  villagehead_options_1_choice_last [label="媽啊我不幹了，回去當勇者 (theme_1_start)"]
+}
