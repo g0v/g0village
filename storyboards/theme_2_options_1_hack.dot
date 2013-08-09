@@ -1,0 +1,29 @@
+digraph {
+
+  theme_2_options_1_hack [label="出村打怪"]
+  theme_2_options_1_hack -> enemy_encountered
+
+  enemy_encountered [label="遇到怪了"]
+  enemy_encountered -> theme_2_options_1
+
+  theme_2_options_1 [shape=diamond, label="1. 一般攻擊\n2. 魔法攻擊\n3. 必殺技\n4. 補血\n5. 道具\n6. 逃跑"]
+  theme_2_options_1 -> theme_2_options_1_normal_attack
+  theme_2_options_1 -> theme_2_options_1_magic_attack
+  theme_2_options_1 -> theme_2_options_1_fatal_blow
+  theme_2_options_1 -> theme_2_options_1_heal
+  theme_2_options_1 -> theme_2_options_1_tool
+  theme_2_options_1 -> theme_2_options_1_flee
+  theme_2_options_1_normal_attack -> theme_2_options_1
+  theme_2_options_1_magic_attack -> theme_2_options_1
+  theme_2_options_1_fatal_blow -> theme_2_options_1
+  theme_2_options_1_heal -> theme_2_options_1
+  theme_2_options_1_tool -> theme_2_options_1
+  theme_2_options_1_flee -> theme_2_options_1
+
+  theme_2_options_1_normal_attack [shape=box, label="你揮舞短鍵，造成 10 點傷害"]
+  theme_2_options_1_magic_attack [shape=box, label="你施展了魔法鍵，造成了 100 點傷害"]
+  theme_2_options_1_fatal_blow [shape=box, label="你的 g0v 計量槽尚未補滿，無法使用必殺技"]
+  theme_2_options_1_heal [shape=box, label="你用逗貓棒跟貓玩了 10 分鐘，覺得自己被治癒了"]
+  theme_2_options_1_tool [shape=box, label="你使用了國防布，怪物大喊「沒有畫面」"]
+  theme_2_options_1_flee [shape=box, label="你逃跑了"]
+}
