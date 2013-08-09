@@ -1,5 +1,9 @@
 // usage: node md_parser.js overworld/hlb.md
 
+// require:
+// npm install lodash
+// npm install markdown
+
 var md = require("markdown").markdown,
     fs = require("fs"),
     util = require('util'),
